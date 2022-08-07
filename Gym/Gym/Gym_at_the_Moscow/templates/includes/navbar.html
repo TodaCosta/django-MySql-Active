@@ -1,0 +1,30 @@
+
+<header>
+  <div class="flex_item logo">
+            Active
+  </div>
+  <div class="flex_item bars_menu" >
+    <input class="input_check" type="checkbox" id="check-menu">
+    <label class="label_check" for="check-menu">Меню</label>
+    <div class="flex_item menu">
+      <ul>
+        <li><a href="{% url 'home' %}"> Главная</a></li>
+        <li><a href="{% url 'abon-name' %}"> Абонемент</a></li>
+        <li><a href="{% url 'hall-name' %}"> Галерея</a></li>
+        <li><a href="{% url 'trainer-name' %}"> Тренеры</a></li>
+        <li><a href="{% url 'stock-name' %}"> Акции</a></li>
+      </ul>
+    </div>
+    <div class="flex_item login">
+      {% if request.user.is_authenticated %}
+      <p>{{ user.username }} | <a href="{% url 'logout' %}">Выход</a></p>
+      {% else %}
+      <p><a href="{% url 'register' %}">Регистрация</a> | <a href="{% url 'login' %}">Войти</a></p>
+      {% endif %}
+    </div>
+  </div>
+</header>
+
+
+
+

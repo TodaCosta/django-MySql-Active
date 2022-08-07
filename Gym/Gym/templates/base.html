@@ -1,0 +1,16 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=no">
+    <meta name="description" content="Фитнес клуб Active в Санкт-Петербурге, метро Московская, Московский район">
+    <title>{% block title %}{% endblock %}</title>
+    <link rel="stylesheet" href=" {% static 'css/base.css' %}">
+    <link href="https://fonts.googleapis.com/css2?family=PT+Sans&family=Roboto:wght@300&display=swap" rel="stylesheet">
+    {% block css_additional %}{% endblock %}
+</head>
+<body>
+    {% block content %}{% endblock %}
+</body>
+</html>

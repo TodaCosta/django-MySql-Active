@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+
+{% block css_additional %}
+<link rel="stylesheet" href="{% static 'Gym_at_the_Moscow/css/all.min.css' %}">
+<link rel="stylesheet" href="{% static 'Gym_at_the_Moscow/css/style.css'%}">
+{% endblock %}
+
+{% block title %}Абонемент в фитнес клуб рядом с метро Московская Спб Санкт-Петербург{% endblock %}
+
+{% block content %}
+        {% include 'includes/navbar.html' %}
+        <div class="abonement_header">
+            <div class="text_header">
+                <h3>Абонемент</h3>
+            </div>
+            <div class="all_block">
+            {% for a in ab%}
+                <div class="card_box">
+                    <span></span>
+                    <h4>{{ a.abonnement }}</h4>
+                    <h5>{{ a.time }}</h5>
+                    <h5>{{ a.price }} руб.</h5>
+                </div>
+            {% endfor %}
+            </div>
+        </div>
+
+{% endblock %}

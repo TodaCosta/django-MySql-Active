@@ -1,0 +1,35 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+
+{% block css_additional %}
+<link rel="stylesheet" href="{% static 'Gym_at_the_Moscow/css/all.min.css' %}">
+<link rel="stylesheet" href="{% static 'Gym_at_the_Moscow/css/style.css'%}">
+{% endblock %}
+
+{% block title %}Тренажерный зал Санкт-Петербург метро Московская Спб{% endblock %}
+
+{% block content %}
+        {% include 'includes/navbar.html' %}
+         <div class="abonement_header">
+                <div class="text_header">
+                    <h3>Галерея</h3>
+                </div>
+                <div class="all_block_gallery">
+                    <div class="card_box_gallery">
+                        <span></span>
+                        <IMG class="displayed" src="/media/home/foto.jpg">
+                    </div>
+                    <div class="card_box_gallery">
+                        <span></span>
+                        <IMG class="displayed" src="/media/home/fotoo.jpg">
+                    </div>
+                    <div class="card_box_gallery">
+                        <span></span>
+                    <IMG class="displayed" src="/media/home/ffoto.jpg">
+                    </div>
+                </div>
+
+        </div>
+{% endblock %}

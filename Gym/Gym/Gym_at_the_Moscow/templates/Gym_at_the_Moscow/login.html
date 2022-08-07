@@ -1,0 +1,37 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+
+{% block css_additional %}
+<link rel="stylesheet" href="{% static 'Gym_at_the_Moscow/css/all.min.css' %}">
+<link rel="stylesheet" href="{% static 'Gym_at_the_Moscow/css/style.css'%}">
+{% endblock %}
+
+{% block title %}Спб Фитнес клуб Active Санкт-Петербург метро Московская{% endblock %}
+{% block content %}
+        {% include 'includes/navbar.html' %}
+         <div class="abonement_header">
+              <div class="text_header">
+                <h3>Авторизация</h3>
+            </div>
+            <div class="all_block">
+
+        <form method="post">
+            <div class="Ab">
+                <div class="form_reg">
+                    <p>{% csrf_token %}
+                        {{ form.as_p }}</p>
+                </div>
+            </div>
+            <div class="Ab">
+                <div class="block_but">
+                    <button type="submit">Авторизация</button>
+                </div>
+            </div>
+
+        </form>
+                  </div>
+         </div>
+
+{% endblock %}

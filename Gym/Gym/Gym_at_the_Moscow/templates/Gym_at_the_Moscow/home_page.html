@@ -1,0 +1,93 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+
+{% block css_additional %}
+<link rel="stylesheet" href="{% static 'Gym_at_the_Moscow/css/all.min.css' %}">
+<link rel="stylesheet" href="{% static 'Gym_at_the_Moscow/css/style.css'%}">
+{% endblock %}
+
+{% block title %}Active{% endblock %}
+{% block content %}
+        {% include 'includes/navbar.html' %}
+        <div class="home_header">
+
+                <div class="text_contact">
+                    <div class="text_before_contact">
+                        <p>Тренировки</p>
+                        <p>делают тебя</p>
+                        <p>лучше</p>
+                    </div>
+
+                        <div class="location">
+                                <p>Санкт-Петербург,</p>
+                                <p> м.Московская, ул.Типанова</p>
+                                <p>с 10:00 до 21:00</p>
+                        </div>
+
+                        <div class="phone">
+
+                                <a href="tel:+79533742661">
+                                <p><i class="fa-solid fa-mobile-screen-button"></i> +7 (953) 374-26-61</p>
+                                </a>
+                        </div>
+                </div>
+
+            <div class="home_item photo">
+                <img src="/media/home/headerHome.png" alt="photo" class="mw">
+            </div>
+        </div>
+
+    <div class="block_1">
+        <p>Строй своё тело вместе с нами</p>
+        <span>Тебе нужен всего 1 час в день, что бы быть в форме</span>
+    </div>
+
+    <div class="block_2">
+        <div class="box_item">
+            <span>4</span>
+            <p>года</p>
+            <p>работы</p>
+        </div>
+        <div class="box_item">
+            <span>12</span>
+            <p>видов</p>
+            <p>тренажеров</p>
+        </div>
+        <div class="box_item">
+            <span>55</span>
+            <p>человек</p>
+            <p>в день</p>
+        </div>
+        <div class="box_item">
+            <span>300+</span>
+            <p>годовых</p>
+            <p>абонементов</p>
+        </div>
+    </div>
+
+
+    <div class="block_3">
+        <div class="block_3_text">
+            <p>Мы просто создали атмосферу
+            такого места, куда постоянно хочется возвращаться.
+                Мало комфортных условий, нужен еще и отзывчивый персонал, который всегда подскажет и поможет.</p>
+        </div>
+        <div class="block_3_photo">
+            <div class="box_img box_img_1"><img src="/media/home/oneGirlHome.jpg" alt="photo" class="wm"></div>
+            <div class="box_img box_img_2"><img src="/media/home/twoHome.jpg" alt="photo" class="wm"></div>
+        </div>
+    </div>
+    <div class="end_block">
+        <div class="logo">
+            Active
+        </div>
+        <a href="tel:+79533742661">
+            <p>+7 (953) 374 - 26 - 61</p>
+        </a>
+    </div>
+
+
+{% endblock %}
+
